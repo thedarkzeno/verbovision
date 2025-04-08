@@ -87,9 +87,9 @@ python training/merge.py --base_model ./models/llava-portuguese-merged --lora_mo
 
 The model is based on LLaVA and includes:
 - Vision encoder (frozen during training)
-- Language model (frozen during training)
+- Language model (trained with LoRA)
 - Multi-modal projector (trained with LoRA)
-- Custom Portuguese language head
+- Custom Portuguese Language model
 
 ## Training Configuration
 
@@ -99,7 +99,7 @@ The model is based on LLaVA and includes:
 - LoRA rank: 64
 - LoRA alpha: 128
 - LoRA dropout: 0.05
-- Training epochs: 1 (pretrain) / 3 (detailed)
+- Training epochs: 1 (pretrain) / 1 (detailed)
 
 ## Output
 
